@@ -1,0 +1,4 @@
+requests>=2.31.0
+customtkinter>=5.2.2
+colorama>=0.4.6
+psutil>=5.9.8 
