@@ -11,51 +11,48 @@ import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Список рабочих серверов для тестирования скорости
-SPEED_TEST_SERVERS = {
+SPEED_TEST_SERVERS = SPEED_TEST_SERVERS = {
     'selectel': {
         'name': 'Selectel',
         'description': 'Стабильные сервера с высокой скоростью',
         'urls': [
-            'https://speedtest.selectel.ru/10GB',
             'https://speedtest.selectel.ru/1GB',
-#            'https://speedtest.selectel.ru/100MB',
-            'http://speedtest.selectel.ru/10GB',
+            'https://speedtest.selectel.ru/10GB',
             'http://speedtest.selectel.ru/1GB',
-#            'http://speedtest.selectel.ru/100MB'
+            'http://speedtest.selectel.ru/10GB',
         ]
     },
     'rastrnet': {
         'name': 'Rastrnet',
         'description': 'Надежные сервера с хорошей скоростью',
         'urls': [
-            'https://speedtest.rastrnet.ru/1GB.zip',
-            'https://speedtest.rastrnet.ru/500MB.zip',
-#            'https://speedtest.rastrnet.ru/100MB.zip',
             'http://speedtest.rastrnet.ru/1GB.zip',
             'http://speedtest.rastrnet.ru/500MB.zip',
-#            'http://speedtest.rastrnet.ru/100MB.zip'
+            'https://speedtest.rastrnet.ru/500MB.zip',
+            'https://speedtest.rastrnet.ru/1GB.zip',
         ]
     },
     'yandex': {
         'name': 'Yandex',
         'description': 'Быстрые сервера от Яндекс',
         'urls': [
-#            'https://yandex.ru/internet/download/10mb.zip',
-            'https://yandex.ru/internet/download/100mb.zip',
- #           'http://yandex.ru/internet/download/10mb.zip',
-            'http://yandex.ru/internet/download/100mb.zip'
         ]
     },
     'google': {
         'name': 'Google',
         'description': 'Тестовые файлы от Google',
         'urls': [
-#            'https://speed.cloudflare.com/10mb.bin',
-            'https://speed.cloudflare.com/100mb.bin',
-#            'http://speed.cloudflare.com/10mb.bin',
-            'http://speed.cloudflare.com/100mb.bin'
         ]
-    }
+    },
+    'iwakurahome': {
+        'name': 'Lain Looking Glass',
+        'description': 'Тестовые файлы от меня',
+        'urls': [
+            'http://lg.iwakurahome.ru/files/file_1GB.bin',
+            'http://lg.iwakurahome.ru/files/file_100MB.bin',
+            'http://lg.iwakurahome.ru/files/file_10GB.bin',
+        ]
+    },
 }
 
 class SpeedTester:
